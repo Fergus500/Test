@@ -1,0 +1,2 @@
+import hashlib
+mystring = input('Enter String to hash:')
