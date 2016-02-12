@@ -1,2 +1,29 @@
+# creator: Fergus Walters
+# Python 27
+# Mobile Forensics - Lab2.
+# The Hashlib is a module that has an interface of the most popular hashing algorithms not including SHA3 which was as a monkey patch
 import hashlib
-mystring = input('Enter String to hash:')
+# To get the SHA3 Hashes these must be imported from a pysha3 module working in conjuncton with the hashlib
+from sha3 import sha3_256, sha3_384, sha3_512, sha3_224
+
+#to get the hash enter in text below   
+mystring = raw_input ('enter text that you want to hash: ')
+      
+#object is creating the string with the applicable hash type
+hash_1 = hashlib.sha1(mystring.encode())
+hash_2 = hashlib.sha256(mystring.encode())
+hash_3 = hashlib.sha512(mystring.encode())
+hash_4 = hashlib.sha3_224(mystring.encode())
+hash_5 = hashlib.sha3_256(mystring.encode())
+hash_6 = hashlib.sha3_512(mystring.encode())
+hash_7 = hashlib.sha3_384(mystring.encode())
+
+
+#print of hash dependent on selection
+print ("This is the SHA-1 HASH: " + hash_1.hexdigest())
+print ("This is the SHA-256: " + hash_2.hexdigest())
+print ("This is the SHA-512: " + hash_3.hexdigest())
+print ("This is the SHA-3(224): " + hash_4.hexdigest())
+print ("This is the SHA-3(256): " + hash_5.hexdigest())
+print ("This is the SHA-3(512): " + hash_6.hexdigest())
+print ("This is the SHA-3(384): " + hash_7.hexdigest())
