@@ -9,7 +9,7 @@ from sha3 import sha3_256, sha3_384, sha3_512, sha3_224
 #to get the hash enter in text below   
 mystring = raw_input ('enter text that you want to hash: ')
       
-#object is creating the string with the applicable hash type
+#creating the string with the applicable hash type
 hash_1 = hashlib.sha1(mystring.encode())
 hash_2 = hashlib.sha256(mystring.encode())
 hash_3 = hashlib.sha512(mystring.encode())
